@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+################################################
+### THIS IS THE TRAINING/VALIDATION PIPELINE ###
+################################################
+
+
+
 # # ***Welcome to the Training and Inference Pipeline ***
 # 
 # # ***Step 1: Mount google drive***
@@ -84,7 +90,7 @@ new_training = False
 
 # Project directory
 # IMPORTANT - ALL DIRECTORIES NEED TO END IN A /
-proj_dir = "/project/gifvl_vaccinium/cranberryFieldImaging/berryFieldImagePipeline/imageSegmentation/FCN_imageSegmentationTest/"
+proj_dir = "/path/to/project/directory/"
  
 num_materials =len(materials)
 
@@ -114,14 +120,11 @@ scale=0.8
 models_directory = proj_dir + "best_models/"
 
 #Input the name you want to use for your group of models
-model_group='berryFinder_3.0.2/'
+model_group='model_group_name/'
 
 ## THIS IS NOT A DIRECTORY; DO NOT ADD TRAILING "/"
-# current_model_name = 'berry_finder_1118_A'
-# current_model_name = 'berry_finder_B'
-# 
 # Model name is based on the current date; so multiple runs are not clobbered
-current_model_name = "berryFinder_" + ds + "_model"
+current_model_name = "model_name_" + ds + "_model"
 
 # """Hold images/annotations in reserve to test your model performance. Use this metric to decide which model you want to use 
 # for your data analysis"""
@@ -167,6 +170,16 @@ output_directory = proj_dir + model_group + 'watershed_adj/'
 #
 # # Close the file
 # handle.close()
+
+
+################################################################################
+################################################################################
+### DO NOT EDIT BELOW THIS LINE ################################################
+################################################################################
+################################################################################
+
+
+
 
 
 
